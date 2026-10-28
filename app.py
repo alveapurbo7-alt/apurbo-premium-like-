@@ -1,4 +1,4 @@
-# MINISTER LIKE API SRC UID PASSWORD 
+# APURBO LIKE API SRC UID PASSWORD 
 # POWERED BY : @ufbapurboyt730
 # CHANNEL : @apurbo_world
 from flask import Flask, request, jsonify, send_from_directory
@@ -310,7 +310,7 @@ def handle_requests():
     key = request.args.get("key")
     client_ip = request.remote_addr
 
-    if key != "AXEDEV":
+    if key != "APURBODEV":
         return jsonify({"error": "Invalid or missing API key 🔑"}), 403
 
     if not uid or not server_name:
@@ -412,7 +412,7 @@ def handle_requests():
 def reset_cache():
     """Reset liked cache (use carefully)"""
     key = request.args.get("key")
-    if key != "AXEDEV":
+    if key != "APURBODEV":
         return jsonify({"error": "Invalid key"}), 403
     
     global liked_cache
